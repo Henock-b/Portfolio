@@ -14,6 +14,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "../../c
 
 import Link from "next/link";
 import Image from "next/image"
+import WorkSliderBtns from '../../components/ui/WorkSliderBtns';
 
 
 
@@ -39,7 +40,7 @@ const projects = [
     github: "",
   },
   {
-    num:'02',
+    num:'03',
     category: "frontend",
     title: 'Project 3',
     description: 'This is a description of project 3.',
@@ -66,22 +67,21 @@ const Work = () => {
   return (
    <motion.section 
    initial={{ opacity: 0}}
-   animate={{ opacity: 1}}
+   animate={{ opacity: 1, transition: {delay: 2.4, duration: 0.4, ease: "easeIn"}}}
    className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"> 
     <div className="container mx-auto">
       <div className="flex flex-col xl:flex-row xl:gap-[30px]">
         <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
           <div className="flex flex-col gap-[30px] h-[50px]">
             {/* outline num */}
-            <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
+            <div className="text-8xl leading-none font-extrabold   #4087e4">
               {project.num}
             </div>
             {/* project category */}
-            <h2 className="text-[42px] font-bold leading-none text-white group-hover
-            :text-accent transition-all duration-500 capitalize">{projects.category} project
+            <h2 className="text-[42px] font-bold leading-none group-hover:text-accent transition-all duration-500 capitalize  ">{project.category} project
             </h2>
             {/* project description */}
-            <p className="text-white/60">{projects.description}</p>
+            <p className="#4087e4">{project.description}</p>
             {/* stack */}
               <ul className="flex gap-4">
                 {project.stack.map((item, index)=> {
@@ -132,7 +132,7 @@ const Work = () => {
               return <SwiperSlide key={index} className='w-full'>
                 <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
                 {/* overlay */}
-                <div></div>
+                <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                 <div>
                   <Image/>
                 </div>
@@ -140,6 +140,9 @@ const Work = () => {
                 </div>
               </SwiperSlide>;
             })}
+            {/* slider buttons */}
+
+            <WorkSliderBtns />
           </Swiper>
         </div>
       </div>

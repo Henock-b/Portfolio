@@ -2,11 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-  body{
- background: gray -50px;
+@layer base {
+   
+  body {
+  background: #F5F5F5 -50px;
+  
+  }
   .h1{
-     @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
+    @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
   }
   .h2{
      @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
@@ -14,7 +17,7 @@
   .h3{
      @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
   }
-  }
+  
  
   .text-outline {
     -webkit-text-stroke: 1px #e3e9f0,
@@ -23,9 +26,10 @@
   .text-outline-hover {
     -webkit-text-stroke: 1px #4087e4,
   }
- }
+ 
 
  .Photo {
    background-color: lightyellow;
    justify-content: center;
- }
+ } 
+}

@@ -74,7 +74,7 @@ const experience = {
 // education data
 const education = {
     icon: '/assets/resume/badge.svg',
-    title: "My education",
+    title: "My Education",
     description: "I have worked on various projects, including web development, mobile app development",
     items: [
         {
@@ -83,7 +83,7 @@ const education = {
             duration: "Jan 2021 - Present",
         },
         {
-            institution:"Embedded electronics",
+            institution:"Embedded Electronics",
             degree: "Full Stack Developer",
             duration: "Jan 2022 - Present",
         },
@@ -97,7 +97,7 @@ const education = {
 
 // skills data
 const skills = {
-    title: "My skills",
+    title: "My Skills",
     description: "I can code in any languege",
     skillList:[
         {

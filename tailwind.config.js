@@ -1,8 +1,7 @@
 //** import type { Config } from "tailwindcss";
 
-import { Container } from "lucide-react";
 
-export default {
+module.exports = {
     darkMode: ["class"],
     content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -14,26 +13,24 @@ export default {
   theme: {
 	Container: {
 		center: true,
-		padding: "15px",
+		padding: "15px"
 		},
 		screens: {
-			sm : "1400px",
+			sm : "640px",
 			md : "768px",
 			lg : "960px",
-			xl : "1200px",
+			xl : "1200px"
 		},
 		fontFamily: {
 			primary: "var(--font-jetbrainsMono)",
 		  },
-	},
-  	extend: {
-		colors: {
-			primary: "#1A1D23",
+	    extend: {
+			colors: {
+			primary: "#F5F5F5",
 			accent: {
-				DEFAULT: "#00ff99",
-				hover: "#00e187"
-			}
-			},
+				DEFAULT: "#87CEEB",
+				hover: "#87CEEB",
+	},
   		keyframes: {
 			"accordion-down": {
 			from: {height: "0"},
@@ -49,7 +46,10 @@ export default {
 		"accordion-up": "accordion-up 0.2s ease-out",
   	},
   },
+},
   plugins: [require("tailwindcss-animate")],
-};
 
-// satisfies Config
+  },
+
+// satisfies Config// 
+};
