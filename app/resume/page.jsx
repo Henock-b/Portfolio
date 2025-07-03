@@ -16,31 +16,31 @@ const about = {
     description: "I'm a full-stack developer with a passion for building scalable and efficient applications.",
   info: [
     {
-        fieldName: "Name",
+        fieldName: "Name -",
         fieldValue: "Henock Beauvoir",
     },
     {
-        fieldName: "Phone",
+        fieldName: "Phone -",
         fieldValue: "215556365",
     },
     {
-        fieldName: "Experience",
+        fieldName: "Experience -",
         fieldValue: "3+ Years",
     },
     {
-        fieldName: "Skype",
+        fieldName: "Skype -",
         fieldValue: "Skillzz23",
     },
     {
-        fieldName: "Nationality",
+        fieldName: "Nationality -",
         fieldValue: "Haitian",
     },
     {
-        fieldName: "Freelance",
+        fieldName: "Freelance -",
         fieldValue: "Available",
     },
     {
-        fieldName: "Languages",
+        fieldName: "Languages -",
         fieldValue: "Creole, English",
     },
 
@@ -52,12 +52,12 @@ const about = {
 const experience = {
     icon: '/assets/resume/badge.svg',
     title: "My Experience",
-    description: "I have worked on various projects, including web development, mobile app development",
+    description: "I have worked on various projects, including web development, mobile app development. Also learning different embedded systems. ",
     items: [
         {
-            company:"tech Solutions Inc.",
+            company:"Opportunity Hack",
             position: "Full Stack Developer",
-            duration: "Jan 2020 - Present",
+            duration: "June 2024 - Present",
         },
         {
             company:"Wev Design Studio.",
@@ -75,21 +75,21 @@ const experience = {
 const education = {
     icon: '/assets/resume/badge.svg',
     title: "My Education",
-    description: "I have worked on various projects, including web development, mobile app development",
+    description: "I have learned and worked on self projects. With different kinds of coding language for system design.",
     items: [
         {
-            institution:"w3.org",
-            degree: "Full Stack Developer",
-            duration: "Jan 2021 - Present",
+            institution:"ed2go",
+            degree: "Software Engineering Bootcamp",
+            duration: "Dec 2024 - Present",
         },
         {
-            institution:"Embedded Electronics",
-            degree: "Full Stack Developer",
+            institution:"Sunfounder Steam Education",
+            degree: "Arduino",
             duration: "Jan 2022 - Present",
         },
         {
-            institution:"Cisco IT",
-            degree: "Full Stack Developer",
+            institution:"Udemy",
+            degree: "Figma Master Class: UX/UI design",
             duration: "Jan 2023 - Present",
         },
     ]
@@ -98,7 +98,7 @@ const education = {
 // skills data
 const skills = {
     title: "My Skills",
-    description: "I can code in any languege",
+    description: "I can code in any language.",
     skillList:[
         {
             icon: <FaHtml5 />,
@@ -159,14 +159,14 @@ className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0">
             <TabsContent value="experience" className="w-full">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                     <h3 className="text-4xl font-bold">{experience.title}</h3>
-                    <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{experience.description}</p>
+                    <p className="max-w-[600px] text-black mx-auto xl:mx-0">{experience.description}</p>
                     <ScrollArea className="h-[400px]">
                         <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                             {experience.items.map((item, index) => {
                                 return (
                                 <li key={index} className= "bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
                                     <span className="text-accent">{item.duration}</span>
-                                    <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.position}</h3>
+                                    <h3 className="text-xl max-w-[260px] min-h-[60px] text-center text-white lg:text-left">{item.position}</h3>
                                     <div className="flex items-center gap-3">
                                         {/*dot */}
                                         <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
@@ -184,14 +184,14 @@ className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0">
             <TabsContent value="education" className="w-full ">
             <div className="flex flex-col gap-[30px] text-center xl:text-left">
                     <h3 className="text-4xl font-bold">{education.title}</h3>
-                    <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{education.description}</p>
+                    <p className="max-w-[600px] text-black mx-auto xl:mx-0">{education.description}</p>
                     <ScrollArea className="h-[400px]">
                         <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                             {education.items.map((item, index) => {
                                 return (
                                 <li key={index} className= "bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
                                     <span className="text-accent">{item.duration}</span>
-                                    <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
+                                    <h3 className="text-xl max-w-[260px] min-h-[60px] text-center text-white lg:text-left">{item.degree}</h3>
                                     <div className="flex items-center gap-3">
                                         {/*dot */}
                                         <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
@@ -211,7 +211,7 @@ className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0">
                 <div className="flex flex-col gap-[30px]">
                     <div className="flex flex-col gap-[30px] text-center xl:text-left">
                         <h3 className="text-4xl font-bold">{skills.title}</h3>
-                        <p className="max-w-[600px] text-white/60 mx-auto xl:m-0">{skills.description}</p>
+                        <p className="max-w-[600px] text-black mx-auto xl:m-0">{skills.description}</p>
                     </div>
                     <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap[30px]">
                         {skills.skillList.map((skill, index) => {
@@ -222,9 +222,9 @@ className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0">
                                         <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
                                             <div className="text-6xl group-hover:text-accent transition-all duration-300">{skill.icon}</div>
                                         </TooltipTrigger>
-                                        <p className="capitalize">{skill.name}</p>
+                                        
                                         <TooltipContent>
-
+                                            <p className="capitalize">{skill.name}</p><div className="0"></div>
                                         </TooltipContent>
                                     </Tooltip>
                                 </TooltipProvider>
@@ -238,11 +238,11 @@ className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0">
             <TabsContent value="about" className="w-full text-center xl:text-left">
                <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto sl:mx-0">{about.description}</p>
+                <p className="max-w-[600px] text-black mx-auto sl:mx-0">{about.description}</p>
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto sl:mx-0">
                    {about.info.map((item,index)=> {
                     return <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
-                        <span className="text-white/60">{item.fieldName}</span>
+                        <span className="text-black/60">{item.fieldName}</span>
                         <span className="text-xl">{item.fieldValue}</span>
                     </li>
                    })} 

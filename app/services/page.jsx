@@ -13,20 +13,20 @@ const services = [
     {
         num: '02',
         title: 'UI/UX Design',
-        description: 'We build fast, scalable, and secure web applications.',
+        description: 'Apply UX strategies to a sites content & design.',
         href:""
     },
     
     {
         num: '03',
-        title: 'Logo Design',
-        description: 'We build fast, scalable, and secure web applications.',
+        title: 'System Design',
+        description: 'Creation of efficient, maintainable, and scalable software systems.',
         href:""
     },
     {
         num: '04',
-        title: 'SEO',
-        description: 'We build fast, scalable, and secure web applications.',
+        title: 'IOT',
+        description: 'Exploring IoT Components, Architectures; Integration.',
         href:""
     },
 ];
@@ -49,7 +49,7 @@ const Services = () => {
                 <div key={index} className="flex-1 flex flex-col justify-center gap-6 group">
                     {/* top */}
                     <div className="w-full flex justify-between items-center">
-                        <div className="text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500" >{service.num}</div>
+                        <div className="text-5xl font-extrabold text-outline text-transparent group-hover:text-accent transition-all duration-500" >{service.num}</div>
                         <Link href={service.href}  className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45">
                         <BsArrowDownRight className="text-primary text-3xl" />
                         </Link>

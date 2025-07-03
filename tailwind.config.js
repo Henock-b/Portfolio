@@ -28,8 +28,8 @@ module.exports = {
 			colors: {
 			primary: "#F5F5F5",
 			accent: {
-				DEFAULT: "#87CEEB",
-				hover: "#87CEEB",
+				DEFAULT: "#0077c8",
+				hover: "#0077c8",
 	},
   		keyframes: {
 			"accordion-down": {
