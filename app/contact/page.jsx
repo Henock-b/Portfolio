@@ -3,7 +3,7 @@
 import { Button } from "../../components/ui/button";
 import { Input } from "../../components/ui/input";
 import { Textarea } from "../../components/ui/textarea";
-import {FormEvent, useState } from "react";
+import {FormEvent , useState } from "react";
 
 
 
@@ -23,17 +23,17 @@ const info = [
   {
     icon: <FaPhoneAlt />,
     title: "Phone:",
-    description: "(215)885-2658",
+    description: "(570) 899-1257",
   },
   {
     icon: <FaEnvelope />,
     title: "email:",
-    description: "youremail@gmail.com",
+    description: "henockbdev@gmail.com",
   },
   {
     icon: <FaMapMarkerAlt/>,
     title: "address:",
-    description: "Code Corner, Tech Town 13579",
+    description: "Wilkes-Barre, PA 18702",
   },
 
 ];
@@ -51,30 +51,36 @@ const Contact = () => {
   const [service, setService] = useState("");
   const [message, setMessage] = useState("");
 
-  const onSubmit = async (e, FormEvent) => {
-    e.preventDefault();
-    // Here you can handle the form submission, e.g., send data to an API or email service
-    try{
-      const res = await fetch("../pages/api/contact.ts", {
-        method: "POST",
-        body: JSON.stringify({
-          firstname,
-          lastname,
-          email,
-          phone,
-          service,
-          message,
-        }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-
-  } catch(err){
-    console.error('Err', err);
-
-}
+  const onSubmit = async (e) => {
+    e.preventDefault()
     
+   
+  try {
+    const res = await fetch ("/app/pages/api/contact", {
+      method: 'POST',
+      body: JSON.stringify({
+        firstname,
+        lastname,
+        email,
+        phone,
+        service,
+        message,
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    if (response.ok) {
+      // Handle successful submission
+      console.log('Form submitted successfully!');
+    } else {
+      // Handle submission errors
+      console.error('Form submission failed.');
+    }
+ } catch (error) {
+    console.error('An error occurred:', error);
+  }
+
     // Reset form fields after submission
     setFirstname("");
     setLastname("");
@@ -83,14 +89,8 @@ const Contact = () => {
     setService("");
     setMessage("");
     alert("Your message has been sent successfully!");
+  };
 
-  const resetService = () => {
-    setService(e.target.value);// Reset the service field
-  
-};
-
-
-  }
 
   return (
 
@@ -107,7 +107,7 @@ const Contact = () => {
         <div className="xl:w-[54%] order-2 xl:order-none">
           <form onSubmit={onSubmit} className="flex-1 flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
             <h3 className="text-4xl text-accent">Let's work together</h3>
-            <p className="text-white/60">Learning and builing new projects is a passion of mines.  </p>
+            <p className="text-white/60">Learning and building new projects is a passion of mines.  </p>
             {/* input */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
               <input

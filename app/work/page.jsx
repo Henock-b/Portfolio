@@ -2,6 +2,7 @@
 
 import {motion} from 'framer-motion';
 import React, { useState } from "react";
+import comingsoon from "@/public/comingsoon.jpg";
 
 import { Swiper, SwiperSlide, SwipeSlide } from "swiper/react";
 import "swiper/css";
@@ -21,10 +22,10 @@ import WorkSliderBtns from '../../components/ui/WorkSliderBtns';
 const projects = [
   {
     num:'01',
-    category: "frontend",
-    title: 'Project 1',
-    description: 'This is a description of project 1.',
-    stack: [{  name: "Html 5"}, {name: "Css 3"}, {name: "Javascript"}],
+    category: "fullstack",
+    title: 'Portfolio Website',
+    description: 'Designed and developed a personal portfolio website to showcase my skills and projects.',
+    stack: [{  name: "JavaScript"}, {name: "TypeScript"}, {name: "Node.js"}],
     image: '/',
     live: "#",
     github: "",
@@ -32,23 +33,14 @@ const projects = [
   {
     num:'02',
     category: "fullstack",
-    title: 'Project 1',
-    description: 'This is a description of project 1.',
-    stack: [{  name: "next.js"}, {name: "Tailwind.css"}, {name: "Node.js"}],
-    image: '/',
+    title: 'Web Application Security Scanner',
+    description: 'This project is a web application security scanner that helps identify vulnerabilities in web applications.',
+    stack: [{  name: "Python"}, {name: "SQL"}, ],
+    image: <Image src={comingsoon} alt="coming soon" className="w-full h-full object-cover" />,
     live: "#",
     github: "",
   },
-  {
-    num:'03',
-    category: "frontend",
-    title: 'Project 3',
-    description: 'This is a description of project 3.',
-    stack: [{  name: "next.js"}, {name: "Tailwind.css"},],
-    image: '/',
-    live: "#",
-    github: "",
-  },
+
 
 ];
 
@@ -77,8 +69,8 @@ const Work = () => {
             <div className="text-8xl leading-none font-extrabold   #4087e4">
               {project.num}
             </div>
-            {/* project category */}
-            <h2 className="text-[42px] font-bold leading-none group-hover:text-accent transition-all duration-500 capitalize  ">{project.category} project
+            {/* project title */}
+            <h2 className="text-[42px] font-bold leading-none group-hover:text-accent transition-all duration-500 capitalize  ">{project.title} 
             </h2>
             {/* project description */}
             <p className="text-black #4087e4">{project.description}</p>
@@ -134,7 +126,7 @@ const Work = () => {
                 {/* overlay */}
                 <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                 <div>
-                  <Image/>
+                  <Image src={comingsoon}/>
                 </div>
 
                 </div>

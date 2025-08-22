@@ -6,6 +6,7 @@ import{FaHtml5,
     FaReact,
     FaFigma,
     FaNodeJs,
+    FaPython,
 } from "react-icons/fa";
 
 import{ SiTailwindcss, SiNextdotjs,} from "react-icons/si";
@@ -21,11 +22,11 @@ const about = {
     },
     {
         fieldName: "Phone -",
-        fieldValue: "215556365",
+        fieldValue: "(570) 899-1257",
     },
     {
         fieldName: "Experience -",
-        fieldValue: "3+ Years",
+        fieldValue: "6+ Years",
     },
     {
         fieldName: "Skype -",
@@ -33,7 +34,7 @@ const about = {
     },
     {
         fieldName: "Nationality -",
-        fieldValue: "Haitian",
+        fieldValue: "American",
     },
     {
         fieldName: "Freelance -",
@@ -41,7 +42,7 @@ const about = {
     },
     {
         fieldName: "Languages -",
-        fieldValue: "Creole, English",
+        fieldValue: "English, Creole",
     },
 
   ]
@@ -59,16 +60,7 @@ const experience = {
             position: "Full Stack Developer",
             duration: "June 2024 - Present",
         },
-        {
-            company:"Wev Design Studio.",
-            position: "Full Stack Developer",
-            duration: "Jan 2020 - Present",
-        },
-        {
-            company:"Wev Design Studio.",
-            position: "Full Stack Developer",
-            duration: "Jan 2020 - Present",
-        },
+ 
     ]
 }
 // education data
@@ -98,7 +90,7 @@ const education = {
 // skills data
 const skills = {
     title: "My Skills",
-    description: "I can code in any language.",
+    description: "I can code in many language.",
     skillList:[
         {
             icon: <FaHtml5 />,
@@ -119,6 +111,14 @@ const skills = {
         {
             icon: <SiTailwindcss />,
             name: "tailwind.css",
+        },
+        {
+            icon: <FaNodeJs />,
+            name: "Node.js",
+        },
+        {
+            icon: <FaPython />,
+            name: "Python",
         },
     ]
 }
