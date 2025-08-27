@@ -20,10 +20,7 @@ const about = {
         fieldName: "Name -",
         fieldValue: "Henock Beauvoir",
     },
-    {
-        fieldName: "Phone -",
-        fieldValue: "(570) 899-1257",
-    },
+  
     {
         fieldName: "Experience -",
         fieldValue: "6+ Years",
